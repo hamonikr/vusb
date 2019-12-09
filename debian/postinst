@@ -1,0 +1,23 @@
+#!/bin/bash
+
+for usr in /home/*
+do
+	UNAME=`echo $usr | awk -F '/' '{print $3}'`
+
+	if [ ! -d "$usr/.config/autostart" ]
+	then
+		mkdir -p $usr/.config/autostart
+		chown $UNAME:$UNAME $usr/.config/autostart
+	fi
+
+	if [ ! -d "$usr/PKI" ]
+	then
+		mkdir -p $usr/PKI
+		chown $UNAME:$UNAME $usr/PKI
+	fi
+
+	cp -r /etc/skel/.config/autostart/userconf.desktop $usr/.config/autostart/
+	chown $UNAME:$UNAME $usr/.config/autostart/userconf.desktop
+done
+
+systemctl restart rc-local.service

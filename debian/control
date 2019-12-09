@@ -1,0 +1,12 @@
+Source: vusb
+Section: admin
+Priority: optional
+Maintainer: HamoniKR <pkg@hamonikr.org>\
+Standards-Version: 1.0.0
+
+Package: vusb
+Architecture: all
+Depends:
+Homepage: https://hamonikr.org
+Description: Vertual USB
+  공인인증서 지원을 위한 가상 USB

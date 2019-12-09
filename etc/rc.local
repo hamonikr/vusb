@@ -1,0 +1,15 @@
+#!/bin//bash
+
+# uid,gid for device
+uid=1000
+gid=1000
+
+# umount
+sudo umount -lf /media/vusb
+sudo rm -rf /media/vusb
+
+# mount
+fallocate -l 10M vusb.img
+mkfs -t vfat vusb.img
+sudo mkdir -vp /media/vusb
+sudo mount -t auto -o loop,umask=0000,gid=${gid},uid=${uid} vusb.img /media/vusb

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/userconf
+Hidden=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+Name=userconf
+Comment=user configration

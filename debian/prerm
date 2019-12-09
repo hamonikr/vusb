@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for usr in /home/*
+do
+        if [ -e "$usr/.config/autostart/userconf.desktop" ]
+	then
+		rm $usr/.config/autostart/userconf.desktop
+        fi
+done

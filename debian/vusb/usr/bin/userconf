@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# remove and copy gpki/npki
+if [ -d /media/vusb ]; then
+	rm -r /media/vusb/*
+
+	if [ -d ~/PKI/GPKI ]; then
+		gpki=~/PKI/GPKI
+		cp -r ${gpki} /media/vusb
+	fi
+
+	if [ -d ~/PKI/NPKI ]; then
+		npki=~/PKI/NPKI
+		cp -r ${npki} /media/vusb
+	fi
+fi
+

@@ -1,0 +1,10 @@
+Package: vusb
+Version: 1.0.0
+Architecture: all
+Maintainer: HamoniKR <pkg@hamonikr.org>\
+Installed-Size: 20
+Section: admin
+Priority: optional
+Homepage: https://hamonikr.org
+Description: Vertual USB
+  공인인증서 지원을 위한 가상 USB
